@@ -1,0 +1,42 @@
+services:
+  # SexShop API
+  - type: web
+    name: sexshop-api
+    env: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: free
+    region: ohio # Puedes cambiarlo
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: UseSqlite
+        value: "true"
+      - key: ConnectionStrings__SqliteConnection
+        value: Data Source=/app/app_data/SexShop.db
+      - key: AllowedOrigins
+        values:
+          - http://localhost:5185
+          - https://localhost:7137
+          - https://sexshop-web.onrender.com # Reemplaza con tu URL real si prefieres
+    disk:
+      name: sqlite-data
+      mountPath: /app/app_data
+      sizeGB: 1
+
+  # SexShop Web
+  - type: web
+    name: sexshop-web
+    env: docker
+    dockerfilePath: ./Dockerfile.web
+    dockerContext: .
+    plan: free
+    region: ohio
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: ApiSettings__BaseUrl
+        fromService:
+          type: web
+          name: sexshop-api
+          property: host

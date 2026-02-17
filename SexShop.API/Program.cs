@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// --- CONFIGURACIÓN PARA RENDER (PUERTO DINÁMICO) ---
+// --- CONFIGURACIÓN PARA RENDER ---
 var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
 builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
 
@@ -17,17 +17,16 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// CORS Policy Profesional para Producción
+// CORS Policy Dinámica para Producción
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowWeb",
         policy =>
         {
-            policy.WithOrigins(
-                    "http://localhost:5185", 
-                    "https://localhost:7137",
-                    "https://sexshop-web.onrender.com" // <-- REEMPLAZA CON TU URL DE RENDER
-                  )
+            var allowedOrigins = builder.Configuration.GetSection("AllowedOrigins").Get<string[]>() 
+                                 ?? new[] { "http://localhost:5185", "https://localhost:7137" };
+            
+            policy.WithOrigins(allowedOrigins)
                   .AllowAnyHeader()
                   .AllowAnyMethod()
                   .AllowCredentials();

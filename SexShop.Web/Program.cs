@@ -23,9 +23,8 @@ builder.Services.AddSession(options =>
 // Configuración dinámica del HttpClient
 builder.Services.AddHttpClient("SexShopAPI", client =>
 {
-    // Prioriza la variable de entorno de Render, si no existe usa appsettings
     var baseUrl = builder.Configuration["ApiSettings:BaseUrl"] 
-                  ?? "https://sexshop-api.onrender.com"; 
+                  ?? "http://localhost:5005"; // Fallback local
     
     client.BaseAddress = new Uri(baseUrl);
 });
