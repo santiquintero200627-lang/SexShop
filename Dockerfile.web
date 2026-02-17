@@ -6,8 +6,6 @@ WORKDIR /src
 COPY ["SexShop.Web/SexShop.Web.csproj", "SexShop.Web/"]
 COPY ["SexShop.Application/SexShop.Application.csproj", "SexShop.Application/"]
 COPY ["SexShop.Domain/SexShop.Domain.csproj", "SexShop.Domain/"]
-# Si la Web usa Infrastructure, descomenta la siguiente línea:
-# COPY ["SexShop.Infrastructure/SexShop.Infrastructure.csproj", "SexShop.Infrastructure/"]
 
 RUN dotnet restore "SexShop.Web/SexShop.Web.csproj"
 
@@ -21,5 +19,6 @@ WORKDIR /app
 COPY --from=build /app/publish .
 
 EXPOSE 8080
+ENV ASPNETCORE_URLS=http://+:8080
 
 ENTRYPOINT ["dotnet", "SexShop.Web.dll"]

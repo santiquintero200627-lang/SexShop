@@ -23,8 +23,10 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowWeb",
         policy =>
         {
-            var allowedOrigins = builder.Configuration.GetSection("AllowedOrigins").Get<string[]>() 
-                                 ?? new[] { "http://localhost:5185", "https://localhost:7137" };
+            var allowedOriginsStr = builder.Configuration["AllowedOrigins"];
+            var allowedOrigins = !string.IsNullOrEmpty(allowedOriginsStr) 
+                ? allowedOriginsStr.Split(',', StringSplitOptions.RemoveEmptyEntries)
+                : new[] { "http://localhost:5185", "https://localhost:7137" };
             
             policy.WithOrigins(allowedOrigins)
                   .AllowAnyHeader()
