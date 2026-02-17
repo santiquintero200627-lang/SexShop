@@ -5,6 +5,10 @@ using SexShop.Application.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// --- CONFIGURACIÓN PARA RENDER (PUERTO DINÁMICO) ---
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddHttpContextAccessor();
@@ -16,14 +20,19 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
+// Configuración dinámica del HttpClient
 builder.Services.AddHttpClient("SexShopAPI", client =>
 {
-    client.BaseAddress = new Uri(builder.Configuration["ApiSettings:BaseUrl"]!);
+    // Prioriza la variable de entorno de Render, si no existe usa appsettings
+    var baseUrl = builder.Configuration["ApiSettings:BaseUrl"] 
+                  ?? "https://sexshop-api.onrender.com"; 
+    
+    client.BaseAddress = new Uri(baseUrl);
 });
 
-builder.Services.AddScoped<IAuthService, AuthService>(); // Client-side auth service
-builder.Services.AddScoped<IProductService, ProductService>(); // Client-side product service
-builder.Services.AddScoped<IOrderService, OrderService>(); // Client-side order service
+builder.Services.AddScoped<IAuthService, AuthService>(); 
+builder.Services.AddScoped<IProductService, ProductService>(); 
+builder.Services.AddScoped<IOrderService, OrderService>(); 
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
@@ -39,11 +48,12 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
+// Render maneja el HTTPS externamente
 // app.UseHttpsRedirection();
+
 app.UseStaticFiles();
 
 app.UseRouting();
