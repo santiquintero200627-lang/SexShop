@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-bs-theme="light">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SEXSHOP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #ffffff; color: #212529; }
+        .navbar { background-color: #f8f9fa; border-bottom: 1px solid #dee2e6; }
+        .navbar-brand { font-weight: bold; color: #198754 !important; letter-spacing: 1px; }
+        .card { background-color: #ffffff; border: 1px solid #dee2e6; transition: transform 0.2s; }
+        .card:hover { transform: translateY(-5px); border-color: #198754; }
+        .btn-primary { background-color: #198754; border-color: #198754; color: white; }
+        .btn-primary:hover { background-color: #157347; border-color: #146c43; color: white; }
+        .text-accent { color: #198754; }
+        footer { background-color: #f8f9fa; border-top: 1px solid #dee2e6; padding: 20px 0; margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><i class="fas fa-fire me-2"></i>SEXSHOP</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Productos</a>
+                        </li>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-success fw-bold" asp-controller="Admin" asp-action="Dashboard">Admin Dashboard</a>
+                            </li>
+                        }
+                    </ul>
+                    <ul class="navbar-nav">
+                        @if (User.Identity!.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <span class="nav-link text-success fw-bold">
+                                    Hola, @(User.IsInRole("Admin") ? "Administrador" : User.FindFirst("given_name")?.Value ?? User.Identity.Name)
+                                </span>
+                            </li>
+                            @if (!User.IsInRole("Admin"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link d-flex align-items-center text-success fw-bold" asp-controller="Cart" asp-action="Index">
+                                        <i class="fas fa-shopping-cart me-1"></i>
+                                        Mis Compras
+                                        <span id="cart-counter" class="badge bg-success ms-2" style="display:none; border-radius: 50%; width: 20px; height: 20px; padding: 0; line-height: 20px; font-size: 0.7rem; text-align: center;">0</span>
+                                    </a>
+                                </li>
+                            }
+                            <li class="nav-item">
+                                <a class="nav-link text-danger" asp-controller="Account" asp-action="Logout">Cerrar Sesión</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Account" asp-action="Login">Iniciar Sesión</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Account" asp-action="Register">Registrarse</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container main-content mt-4">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer text-muted">
+        <div class="container text-center">
+            &copy; 2026 - SEXSHOP - <a class="text-secondary" asp-controller="Home" asp-action="Privacy">Privacidad</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        $(document).ready(function () {
+            // Load initial cart count
+            $.get('/Cart/GetCartCount', function (data) {
+                updateCartBadge(data.count);
+            });
+
+            // Handle Add to Cart clicks
+            $('.add-to-cart-btn').click(function () {
+                var productId = $(this).data('product-id');
+                var button = $(this);
+                
+                button.prop('disabled', true);
+                button.html('<i class="fas fa-spinner fa-spin"></i>');
+
+                $.post('/Cart/AddToCart', { productId: productId }, function (data) {
+                    if (data.success) {
+                        updateCartBadge(data.itemCount);
+                        button.html('<i class="fas fa-check"></i> Agregado');
+                        button.removeClass('btn-outline-light').addClass('btn-success');
+                        
+                        setTimeout(function () {
+                            button.html('<i class="fas fa-cart-plus me-1"></i> Agregar');
+                            button.removeClass('btn-success').addClass('btn-outline-light');
+                            button.prop('disabled', false);
+                        }, 1500);
+                    }
+                });
+            });
+
+            function updateCartBadge(count) {
+                if (count > 0) {
+                    $('#cart-counter').text(count).fadeIn();
+                } else {
+                    $('#cart-counter').hide();
+                }
+            }
+        });
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

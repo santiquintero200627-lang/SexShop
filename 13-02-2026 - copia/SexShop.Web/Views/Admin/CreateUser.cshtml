@@ -1,0 +1,58 @@
+@model SexShop.Application.DTOs.Auth.RegisterDto
+@{
+    ViewData["Title"] = "Nuevo Usuario";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <div class="card bg-white shadow">
+                <div class="card-header border-bottom border-light">
+                    <h4 class="mb-0"><i class="fas fa-user-plus me-2"></i>Crear Nuevo Usuario</h4>
+                </div>
+                <div class="card-body">
+                    <form asp-action="CreateUser" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger small"></div>
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="FirstName" class="form-label text-muted small uppercase fw-bold">Nombre</label>
+                                <input asp-for="FirstName" class="form-control border-accent" required />
+                                <span asp-validation-for="FirstName" class="text-danger small"></span>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="LastName" class="form-label text-muted small uppercase fw-bold">Apellido</label>
+                                <input asp-for="LastName" class="form-control border-accent" required />
+                                <span asp-validation-for="LastName" class="text-danger small"></span>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Email" class="form-label text-muted small uppercase fw-bold">Correo Electrónico</label>
+                            <input asp-for="Email" type="email" class="form-control border-accent" required />
+                        </div>
+ 
+                        <div class="mb-3">
+                            <label asp-for="Password" class="form-label text-muted small uppercase fw-bold">Contraseña</label>
+                            <input asp-for="Password" type="password" class="form-control border-accent" required />
+                            <span asp-validation-for="Password" class="text-danger small"></span>
+                        </div>
+ 
+                        <div class="mb-3">
+                            <label asp-for="ConfirmPassword" class="form-label text-muted small uppercase fw-bold">Confirmar Contraseña</label>
+                            <input asp-for="ConfirmPassword" type="password" class="form-control border-accent" required />
+                            <span asp-validation-for="ConfirmPassword" class="text-danger small"></span>
+                        </div>
+ 
+                        <div class="d-grid gap-2 mt-4">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-user-check me-2"></i> Crear Usuario
+                            </button>
+                            <a asp-action="Users" class="btn btn-outline-success">Cancelar</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

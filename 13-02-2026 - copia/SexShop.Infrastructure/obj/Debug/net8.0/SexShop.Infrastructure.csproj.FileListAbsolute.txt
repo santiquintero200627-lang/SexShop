@@ -1,0 +1,57 @@
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Infrastructure\bin\Debug\net8.0\SexShop.Infrastructure.deps.json
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Infrastructure\bin\Debug\net8.0\SexShop.Infrastructure.runtimeconfig.json
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Infrastructure\bin\Debug\net8.0\SexShop.Infrastructure.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Infrastructure\bin\Debug\net8.0\SexShop.Infrastructure.pdb
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Infrastructure\bin\Debug\net8.0\SexShop.Application.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Infrastructure\bin\Debug\net8.0\SexShop.Domain.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Infrastructure\bin\Debug\net8.0\SexShop.Application.pdb
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Infrastructure\bin\Debug\net8.0\SexShop.Domain.pdb
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Infrastructure\obj\Debug\net8.0\SexShop.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Infrastructure\obj\Debug\net8.0\SexShop.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Infrastructure\obj\Debug\net8.0\SexShop.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Infrastructure\obj\Debug\net8.0\SexShop.Infrastructure.AssemblyInfo.cs
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Infrastructure\obj\Debug\net8.0\SexShop.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Infrastructure\obj\Debug\net8.0\SexShop.Infrastructure.csproj.CopyComplete
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Infrastructure\obj\Debug\net8.0\SexShop.Infrastructure.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Infrastructure\obj\Debug\net8.0\refint\SexShop.Infrastructure.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Infrastructure\obj\Debug\net8.0\SexShop.Infrastructure.pdb
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Infrastructure\obj\Debug\net8.0\SexShop.Infrastructure.genruntimeconfig.cache
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Infrastructure\obj\Debug\net8.0\ref\SexShop.Infrastructure.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Infrastructure\obj\Debug\net8.0\SexShop.Infrastructure.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Infrastructure\obj\Debug\net8.0\refint\SexShop.Infrastructure.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Infrastructure\obj\Debug\net8.0\SexShop.Infrastructure.pdb
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Infrastructure\bin\Debug\net8.0\SexShop.Infrastructure.deps.json
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Infrastructure\bin\Debug\net8.0\SexShop.Infrastructure.runtimeconfig.json
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Infrastructure\bin\Debug\net8.0\SexShop.Infrastructure.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Infrastructure\bin\Debug\net8.0\SexShop.Infrastructure.pdb
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Infrastructure\bin\Debug\net8.0\SexShop.Application.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Infrastructure\bin\Debug\net8.0\SexShop.Domain.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Infrastructure\bin\Debug\net8.0\SexShop.Application.pdb
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Infrastructure\bin\Debug\net8.0\SexShop.Domain.pdb
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Infrastructure\obj\Debug\net8.0\SexShop.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Infrastructure\obj\Debug\net8.0\SexShop.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Infrastructure\obj\Debug\net8.0\SexShop.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Infrastructure\obj\Debug\net8.0\SexShop.Infrastructure.AssemblyInfo.cs
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Infrastructure\obj\Debug\net8.0\SexShop.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Infrastructure\obj\Debug\net8.0\SexShop.Infrastructure.csproj.CopyComplete
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Infrastructure\obj\Debug\net8.0\SexShop.Infrastructure.genruntimeconfig.cache
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Infrastructure\obj\Debug\net8.0\ref\SexShop.Infrastructure.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Infrastructure\bin\Debug\net8.0\SexShop.Infrastructure.deps.json
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Infrastructure\bin\Debug\net8.0\SexShop.Infrastructure.runtimeconfig.json
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Infrastructure\bin\Debug\net8.0\SexShop.Infrastructure.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Infrastructure\bin\Debug\net8.0\SexShop.Infrastructure.pdb
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Infrastructure\bin\Debug\net8.0\SexShop.Application.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Infrastructure\bin\Debug\net8.0\SexShop.Domain.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Infrastructure\bin\Debug\net8.0\SexShop.Application.pdb
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Infrastructure\bin\Debug\net8.0\SexShop.Domain.pdb
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Infrastructure\obj\Debug\net8.0\SexShop.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Infrastructure\obj\Debug\net8.0\SexShop.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Infrastructure\obj\Debug\net8.0\SexShop.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Infrastructure\obj\Debug\net8.0\SexShop.Infrastructure.AssemblyInfo.cs
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Infrastructure\obj\Debug\net8.0\SexShop.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Infrastructure\obj\Debug\net8.0\SexShop..A766A2F9.Up2Date
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Infrastructure\obj\Debug\net8.0\SexShop.Infrastructure.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Infrastructure\obj\Debug\net8.0\refint\SexShop.Infrastructure.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Infrastructure\obj\Debug\net8.0\SexShop.Infrastructure.pdb
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Infrastructure\obj\Debug\net8.0\SexShop.Infrastructure.genruntimeconfig.cache
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Infrastructure\obj\Debug\net8.0\ref\SexShop.Infrastructure.dll

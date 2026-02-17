@@ -1,0 +1,42 @@
+@model LoginDto
+@{
+    ViewData["Title"] = "Iniciar Sesión";
+}
+
+<div class="row justify-content-center mt-5">
+    <div class="col-md-4">
+        <div class="card bg-white shadow-lg">
+            <div class="card-header border-bottom border-light text-center">
+                <h3 class="text-dark"><i class="fas fa-sign-in-alt me-2 text-success"></i>Login</h3>
+            </div>
+            <div class="card-body">
+                <form asp-action="Login" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+                    
+                    <div class="mb-3">
+                        <label asp-for="Email" class="form-label text-dark">Email</label>
+                        <input asp-for="Email" class="form-control border-accent" placeholder="admin@sexshop.com" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+ 
+                    <div class="mb-3">
+                        <label asp-for="Password" class="form-label text-dark">Contraseña</label>
+                        <input asp-for="Password" type="password" class="form-control border-accent" placeholder="Password" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+ 
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg">Ingresar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer bg-light text-center">
+                <small class="text-muted">¿No tienes cuenta? <a asp-action="Register" class="text-accent fw-bold text-decoration-none">Regístrate aquí</a></small>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

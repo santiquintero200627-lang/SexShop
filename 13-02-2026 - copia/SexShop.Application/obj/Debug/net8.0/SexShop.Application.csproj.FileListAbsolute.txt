@@ -1,0 +1,45 @@
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Application\bin\Debug\net8.0\SexShop.Application.deps.json
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Application\bin\Debug\net8.0\SexShop.Application.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Application\bin\Debug\net8.0\SexShop.Application.pdb
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Application\bin\Debug\net8.0\SexShop.Domain.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Application\bin\Debug\net8.0\SexShop.Domain.pdb
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Application\obj\Debug\net8.0\SexShop.Application.csproj.AssemblyReference.cache
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Application\obj\Debug\net8.0\SexShop.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Application\obj\Debug\net8.0\SexShop.Application.AssemblyInfoInputs.cache
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Application\obj\Debug\net8.0\SexShop.Application.AssemblyInfo.cs
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Application\obj\Debug\net8.0\SexShop.Application.csproj.CoreCompileInputs.cache
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Application\obj\Debug\net8.0\SexShop.Application.csproj.CopyComplete
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Application\obj\Debug\net8.0\SexShop.Application.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Application\obj\Debug\net8.0\refint\SexShop.Application.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Application\obj\Debug\net8.0\SexShop.Application.pdb
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026\SexShop.Application\obj\Debug\net8.0\ref\SexShop.Application.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Application\obj\Debug\net8.0\SexShop.Application.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Application\obj\Debug\net8.0\refint\SexShop.Application.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Application\obj\Debug\net8.0\SexShop.Application.pdb
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Application\bin\Debug\net8.0\SexShop.Application.deps.json
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Application\bin\Debug\net8.0\SexShop.Application.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Application\bin\Debug\net8.0\SexShop.Application.pdb
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Application\bin\Debug\net8.0\SexShop.Domain.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Application\bin\Debug\net8.0\SexShop.Domain.pdb
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Application\obj\Debug\net8.0\SexShop.Application.csproj.AssemblyReference.cache
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Application\obj\Debug\net8.0\SexShop.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Application\obj\Debug\net8.0\SexShop.Application.AssemblyInfoInputs.cache
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Application\obj\Debug\net8.0\SexShop.Application.AssemblyInfo.cs
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Application\obj\Debug\net8.0\SexShop.Application.csproj.CoreCompileInputs.cache
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Application\obj\Debug\net8.0\SexShop.Application.csproj.CopyComplete
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\SexShop.Application\obj\Debug\net8.0\ref\SexShop.Application.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Application\bin\Debug\net8.0\SexShop.Application.deps.json
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Application\bin\Debug\net8.0\SexShop.Application.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Application\bin\Debug\net8.0\SexShop.Application.pdb
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Application\bin\Debug\net8.0\SexShop.Domain.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Application\bin\Debug\net8.0\SexShop.Domain.pdb
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Application\obj\Debug\net8.0\SexShop.Application.csproj.AssemblyReference.cache
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Application\obj\Debug\net8.0\SexShop.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Application\obj\Debug\net8.0\SexShop.Application.AssemblyInfoInputs.cache
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Application\obj\Debug\net8.0\SexShop.Application.AssemblyInfo.cs
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Application\obj\Debug\net8.0\SexShop.Application.csproj.CoreCompileInputs.cache
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Application\obj\Debug\net8.0\SexShop..6B03699E.Up2Date
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Application\obj\Debug\net8.0\SexShop.Application.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Application\obj\Debug\net8.0\refint\SexShop.Application.dll
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Application\obj\Debug\net8.0\SexShop.Application.pdb
+C:\Users\santi\OneDrive\Escritorio\3170247\Johan\13-02-2026 - copia\13-02-2026 - copia\SexShop.Application\obj\Debug\net8.0\ref\SexShop.Application.dll
