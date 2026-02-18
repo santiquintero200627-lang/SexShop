@@ -3,7 +3,7 @@ services:
   - type: web
     name: sexshop-api
     env: docker
-    rootDir: SexShopProject
+    rootDir: .        # <--- CAMBIADO: El punto (.) significa la raíz
     dockerfilePath: Dockerfile
     dockerContext: .
     plan: free
@@ -22,7 +22,7 @@ services:
   - type: web
     name: sexshop-web
     env: docker
-    rootDir: SexShopProject
+    rootDir: .        # <--- CAMBIADO: El punto (.) significa la raíz
     dockerfilePath: Dockerfile.web
     dockerContext: .
     plan: free
