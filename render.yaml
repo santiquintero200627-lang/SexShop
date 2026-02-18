@@ -3,8 +3,9 @@ services:
   - type: web
     name: sexshop-api
     env: docker
+    rootDir: SexShopProject
     dockerfilePath: Dockerfile
-    dockerContext: 13-02-2026 - copia
+    dockerContext: .
     plan: free
     region: ohio
     envVars:
@@ -21,8 +22,9 @@ services:
   - type: web
     name: sexshop-web
     env: docker
+    rootDir: SexShopProject
     dockerfilePath: Dockerfile.web
-    dockerContext: 13-02-2026 - copia
+    dockerContext: .
     plan: free
     region: ohio
     envVars:

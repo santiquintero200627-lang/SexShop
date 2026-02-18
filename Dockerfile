@@ -1,7 +1,7 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Rutas limpias asumiendo que el Dockerfile está en la raíz del contexto
+# Dockerfile para la API
 COPY ["SexShop.API/SexShop.API.csproj", "SexShop.API/"]
 COPY ["SexShop.Application/SexShop.Application.csproj", "SexShop.Application/"]
 COPY ["SexShop.Domain/SexShop.Domain.csproj", "SexShop.Domain/"]
