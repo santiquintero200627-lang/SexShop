@@ -1,0 +1,32 @@
+# Query: vibrador
+# ContextLines: 1
+
+15 results - 3 files
+
+SexShop.API\Helpers\SeedData.cs:
+  44              {
+  45:                 new Product { Name = "Vibrador Clásico", Description = "Potente vibrador clásico de 7 velocidades.", Price = 29.99m, Stock = 50, ImageUrl = "https://via.placeholder.com/400x300?text=Vibrador+Clasico", IsActive = true },
+  46                  new Product { Name = "Lencería Sexy Roja", Description = "Conjunto de lencería de encaje rojo.", Price = 45.00m, Stock = 20, ImageUrl = "https://via.placeholder.com/400x300?text=Lenceria+Roja", IsActive = true },
+  47                  new Product { Name = "Aceite de Masaje", Description = "Aceite aromático para masajes relajantes.", Price = 15.50m, Stock = 100, ImageUrl = "https://via.placeholder.com/400x300?text=Aceite+Masaje", IsActive = true },
+  48:                 new Product { Name = "Vibrador Rabbit Deluxe", Description = "Vibrador con doble estimulación, 10 modos de vibración y material siliconado premium.", Price = 49.99m, Stock = 15, ImageUrl = "https://via.placeholder.com/400x300?text=Rabbit+Deluxe", IsActive = true },
+  49                  new Product { Name = "Plug Anal Silicona Pro", Description = "Plug anal ergonómico de silicona médica con base de seguridad.", Price = 24.50m, Stock = 25, ImageUrl = "https://via.placeholder.com/400x300?text=Plug+Silicona", IsActive = true },
+
+  51                  new Product { Name = "Lubricante Base Agua 250ml", Description = "Lubricante íntimo base agua, compatible con preservativos y juguetes.", Price = 12.90m, Stock = 40, ImageUrl = "https://via.placeholder.com/400x300?text=Lubricante", IsActive = true },
+  52:                 new Product { Name = "Bala Vibradora Mini", Description = "Bala vibradora discreta con control remoto inalámbrico.", Price = 29.99m, Stock = 20, ImageUrl = "https://via.placeholder.com/400x300?text=Bala+Vibradora", IsActive = true },
+  53                  new Product { Name = "Kit BDSM Principiantes", Description = "Kit completo con antifaz, esposas, látigo suave y collar ajustable.", Price = 59.90m, Stock = 10, ImageUrl = "https://via.placeholder.com/400x300?text=Kit+BDSM", IsActive = true },
+  54:                 new Product { Name = "Anillo Vibrador Recargable", Description = "Anillo para parejas con vibración potente y batería recargable USB.", Price = 34.99m, Stock = 18, ImageUrl = "https://via.placeholder.com/400x300?text=Anillo+Vibrador", IsActive = true },
+  55                  new Product { Name = "Masturbador Masculino Soft Touch", Description = "Masturbador con textura interna realista y material ultra suave.", Price = 39.50m, Stock = 22, ImageUrl = "https://via.placeholder.com/400x300?text=Masturbador", IsActive = true },
+
+  58                  new Product { Name = "Plug Anal Metálico Premium", Description = "Plug metálico de acero inoxidable con acabado brillante.", Price = 42.00m, Stock = 14, ImageUrl = "https://via.placeholder.com/400x300?text=Plug+Metalico", IsActive = true },
+  59:                 new Product { Name = "Vibrador Punto G Curvo", Description = "Vibrador curvo especialmente diseñado para estimulación del punto G.", Price = 36.75m, Stock = 16, ImageUrl = "https://via.placeholder.com/400x300?text=Vibrador+G", IsActive = true }
+  60              };
+
+SexShop.Web\Views\Admin\CreateProduct.cshtml:
+  18                              <label asp-for="Name" class="form-label text-muted small uppercase fw-bold">Nombre del Producto</label>
+  19:                             <input asp-for="Name" class="form-control border-accent" placeholder="Ej: Vibrador Elite" required />
+  20                              <span asp-validation-for="Name" class="text-danger small"></span>
+
+SexShop.Web\Views\Admin\EditProduct.cshtml:
+  19                              <label asp-for="Name" class="form-label text-muted small uppercase fw-bold">Nombre del Producto</label>
+  20:                             <input asp-for="Name" class="form-control border-accent" placeholder="Ej: Vibrador Elite" required />
+  21                              <span asp-validation-for="Name" class="text-danger small"></span>

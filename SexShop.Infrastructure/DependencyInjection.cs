@@ -18,21 +18,11 @@ namespace SexShop.Infrastructure
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
-            // DbContext
-            if (configuration.GetValue<bool>("UseSqlite"))
-            {
-                services.AddDbContext<ApplicationDbContext>(options =>
-                    options.UseSqlite(
-                        configuration.GetConnectionString("SqliteConnection"),
-                        b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
-            }
-            else
-            {
-                services.AddDbContext<ApplicationDbContext>(options =>
-                    options.UseSqlServer(
-                        configuration.GetConnectionString("DefaultConnection"),
-                        b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
-            }
+            // DbContext configurado para PostgreSQL
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseNpgsql(
+                    configuration.GetConnectionString("DefaultConnection"),
+                    b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
 
             // Identity
             services.AddIdentity<ApplicationUser, ApplicationRole>()
