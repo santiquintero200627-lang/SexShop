@@ -11,7 +11,7 @@ using SexShop.Infrastructure.Identity;
 using SexShop.Infrastructure.Persistence;
 using SexShop.Infrastructure.Repositories;
 using System.Text;
-using Npgsql; // Asegúrate de tener esta directiva para SslMode
+using Npgsql;
 
 namespace SexShop.Infrastructure
 {
@@ -19,7 +19,7 @@ namespace SexShop.Infrastructure
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
-            // 1. Obtenemos la cadena de conexión
+            // 1. Obtenemos la cadena de conexión (Asegúrate de que en Render sea la INTERNAL URL de Ohio)
             var connectionString = configuration.GetConnectionString("DefaultConnection");
 
             if (string.IsNullOrEmpty(connectionString))
@@ -27,22 +27,19 @@ namespace SexShop.Infrastructure
                 throw new InvalidOperationException("La cadena de conexión 'DefaultConnection' no fue encontrada.");
             }
 
-            // 2. Lógica robusta usando NpgsqlConnectionStringBuilder (Solución EndOfStream)
+            // 2. Usamos el Builder oficial para forzar SSL y desactivar el Pooling (Solución definitiva al EndOfStream)
             var builder = new NpgsqlConnectionStringBuilder(connectionString)
             {
                 SslMode = SslMode.Require,
                 TrustServerCertificate = true,
-                Pooling = false, // DESACTIVADO para evitar errores de conexión en Render
-                IncludeErrorDetail = true
+                Pooling = false, // Evita errores de reuso de conexiones en el plan gratuito de Render
+                KeepAlive = 30
             };
 
-            // Re-asignamos la cadena procesada por el builder
-            var finalConnectionString = builder.ConnectionString;
-
-            // 3. Configuración del DbContext
+            // 3. Configuración del DbContext apuntando a la infraestructura de Ohio
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseNpgsql(
-                    finalConnectionString,
+                    builder.ConnectionString,
                     b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)
                           .EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null)));
 
