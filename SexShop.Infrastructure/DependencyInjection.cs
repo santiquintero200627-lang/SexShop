@@ -11,6 +11,7 @@ using SexShop.Infrastructure.Identity;
 using SexShop.Infrastructure.Persistence;
 using SexShop.Infrastructure.Repositories;
 using System.Text;
+using Npgsql; // Asegúrate de tener esta directiva para SslMode
 
 namespace SexShop.Infrastructure
 {
@@ -26,31 +27,22 @@ namespace SexShop.Infrastructure
                 throw new InvalidOperationException("La cadena de conexión 'DefaultConnection' no fue encontrada.");
             }
 
-            // 2. Lógica de limpieza y conversión para Render/PostgreSQL
-            if (connectionString.StartsWith("postgres://") || connectionString.StartsWith("postgresql://"))
+            // 2. Lógica robusta usando NpgsqlConnectionStringBuilder (Solución EndOfStream)
+            var builder = new NpgsqlConnectionStringBuilder(connectionString)
             {
-                // Convertimos el formato URI a formato Key=Value que prefiere Npgsql
-                var uri = new Uri(connectionString);
-                var userInfo = uri.UserInfo.Split(':');
-                
-                var username = Uri.UnescapeDataString(userInfo[0]);
-                var password = Uri.UnescapeDataString(userInfo[1]);
-                var host = uri.Host;
-                var port = uri.Port;
-                var database = Uri.UnescapeDataString(uri.AbsolutePath.TrimStart('/'));
+                SslMode = SslMode.Require,
+                TrustServerCertificate = true,
+                Pooling = false, // DESACTIVADO para evitar errores de conexión en Render
+                IncludeErrorDetail = true
+            };
 
-                connectionString = $"Host={host};Port={port};Database={database};Username={username};Password={password};SslMode=Require;Trust Server Certificate=true;";
-            }
-            else if (!connectionString.Contains("SslMode", StringComparison.OrdinalIgnoreCase))
-            {
-                // Si es formato estándar pero no tiene SSL, se lo forzamos
-                connectionString = connectionString.TrimEnd(';') + ";SslMode=Require;Trust Server Certificate=true;";
-            }
+            // Re-asignamos la cadena procesada por el builder
+            var finalConnectionString = builder.ConnectionString;
 
-            // 3. Configuración del DbContext con reintentos
+            // 3. Configuración del DbContext
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseNpgsql(
-                    connectionString,
+                    finalConnectionString,
                     b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)
                           .EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null)));
 
