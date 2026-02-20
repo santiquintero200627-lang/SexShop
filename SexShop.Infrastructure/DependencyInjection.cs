@@ -18,22 +18,30 @@ namespace SexShop.Infrastructure
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
-            // DbContext configurado para PostgreSQL con SSL y Reintentos para Render
+            // 1. Obtenemos la cadena de conexión
             var connectionString = configuration.GetConnectionString("DefaultConnection");
 
-            // Si es una URL de PostgreSQL (común en Render), la convertimos al formato de Npgsql
-            if (connectionString != null && connectionString.StartsWith("postgres://"))
+            if (string.IsNullOrEmpty(connectionString))
             {
-                var uri = new Uri(connectionString);
-                var userInfo = uri.UserInfo.Split(':');
-                connectionString = $"Host={uri.Host};Port={uri.Port};Database={uri.AbsolutePath.TrimStart('/')};Username={userInfo[0]};Password={userInfo[1]};SslMode=Require;Trust Server Certificate=true";
-            }
-            else if (connectionString != null && !connectionString.Contains("SslMode"))
-            {
-                // Si es una cadena normal pero no tiene SSL, se lo agregamos para Render
-                connectionString += ";SslMode=Require;Trust Server Certificate=true";
+                throw new InvalidOperationException("La cadena de conexión 'DefaultConnection' no fue encontrada.");
             }
 
+            // 2. Lógica de limpieza y conversión para Render/PostgreSQL
+            if (connectionString.StartsWith("postgres://") || connectionString.StartsWith("postgresql://"))
+            {
+                // Convertimos el formato URI a formato Key=Value que prefiere Npgsql
+                var uri = new Uri(connectionString);
+                var userInfo = uri.UserInfo.Split(':');
+                
+                connectionString = $"Host={uri.Host};Port={uri.Port};Database={uri.AbsolutePath.TrimStart('/')};Username={userInfo[0]};Password={userInfo[1]};SslMode=Require;TrustServerCertificate=true;";
+            }
+            else if (!connectionString.Contains("SslMode", StringComparison.OrdinalIgnoreCase))
+            {
+                // Si es formato estándar pero no tiene SSL, se lo forzamos (sin espacios en las llaves)
+                connectionString = connectionString.TrimEnd(';') + ";SslMode=Require;TrustServerCertificate=true;";
+            }
+
+            // 3. Configuración del DbContext con reintentos
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseNpgsql(
                     connectionString,
