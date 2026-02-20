@@ -33,12 +33,18 @@ namespace SexShop.Infrastructure
                 var uri = new Uri(connectionString);
                 var userInfo = uri.UserInfo.Split(':');
                 
-                connectionString = $"Host={uri.Host};Port={uri.Port};Database={uri.AbsolutePath.TrimStart('/')};Username={userInfo[0]};Password={userInfo[1]};SslMode=Require;TrustServerCertificate=true;";
+                var username = Uri.UnescapeDataString(userInfo[0]);
+                var password = Uri.UnescapeDataString(userInfo[1]);
+                var host = uri.Host;
+                var port = uri.Port;
+                var database = Uri.UnescapeDataString(uri.AbsolutePath.TrimStart('/'));
+
+                connectionString = $"Host={host};Port={port};Database={database};Username={username};Password={password};SslMode=Require;Trust Server Certificate=true;";
             }
             else if (!connectionString.Contains("SslMode", StringComparison.OrdinalIgnoreCase))
             {
-                // Si es formato estándar pero no tiene SSL, se lo forzamos (sin espacios en las llaves)
-                connectionString = connectionString.TrimEnd(';') + ";SslMode=Require;TrustServerCertificate=true;";
+                // Si es formato estándar pero no tiene SSL, se lo forzamos
+                connectionString = connectionString.TrimEnd(';') + ";SslMode=Require;Trust Server Certificate=true;";
             }
 
             // 3. Configuración del DbContext con reintentos
