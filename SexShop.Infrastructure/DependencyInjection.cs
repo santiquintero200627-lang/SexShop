@@ -18,11 +18,12 @@ namespace SexShop.Infrastructure
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
-            // DbContext configurado para PostgreSQL
+            // DbContext configurado para PostgreSQL con SSL y Reintentos para Render
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseNpgsql(
-                    configuration.GetConnectionString("DefaultConnection"),
-                    b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
+                    configuration.GetConnectionString("DefaultConnection") + ";Trust Server Certificate=true",
+                    b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)
+                          .EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null)));
 
             // Identity
             services.AddIdentity<ApplicationUser, ApplicationRole>()
